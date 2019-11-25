@@ -135,7 +135,7 @@ void CheckRetrieves(
 		throw  SetErrorMsgText("sendto:", WSAGetLastError());
 
 	timeval timeout;
-	timeout.tv_sec = 20000;
+	timeout.tv_sec = 5000;
 	timeout.tv_usec = 0;
 
 	setsockopt(ss, SOL_SOCKET, SO_RCVTIMEO, (char*)&timeout, sizeof(timeout));
